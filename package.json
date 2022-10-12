@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "feather-icons": "^4.29.0",
+    "gh-pages": "^4.0.0",
     "hyper-halcyon-theme": "^0.1.1",
     "next": "12.3.1",
     "react": "18.2.0",

@@ -3,11 +3,6 @@ import '../styles/globals.sass'
 function MyApp({ Component, pageProps }) {
   return (
     <html lang="en">
-      <head>
-        <title>Katie Kim</title>
-
-      </head>
-
       <nav>
         <div>
           <button><i data-feather="play"></i></button>
@@ -35,15 +30,13 @@ function MyApp({ Component, pageProps }) {
           <span><a href="mailto:me@katiekim.dev" class="mail">me@katiekim.dev</a></span>
         </div>
         <div>
-          <a href="" class="social"><i data-feather="github"></i></a>
+          <a href="" class="social"></a>
           <a href="" class="social"><i data-feather="linkedin"></i></a>
           <a href="" class="social"><i data-feather="instagram"></i></a>
           <a href="" class="social"><i data-feather="twitter"></i></a>
           <a href="" class="social"><i data-feather="codepen"></i></a>
         </div>
       </footer>
-
-      <script>feather.replace()</script>
     </html>
   )
 }

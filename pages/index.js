@@ -11,7 +11,9 @@ export default function Home() {
         <h1><span>Aram</span> Katie Kim</h1>
         <h2>I am a software engineer and tech enthusiast.</h2>
         <p>I am a software engineer specializing in building exceptional digital experiences. I am open for opportunities to start off my career in this field while actively working as a Project Engineer.</p>
-        <a href="/projects" className={styles.resume}>Check out my work! <Icon.ArrowRight className={styles.arrow} /></a>
+        <Link href="/projects">
+          <a className={styles.resume}>Check out my work! <Icon.ArrowRight className={styles.arrow} /></a>
+        </Link>
       </div>
   </article>
   )

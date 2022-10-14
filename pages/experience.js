@@ -8,7 +8,7 @@ export default function Experience() {
   return (
     <article className={styles.exp}>
         <div>
-          <h1>How I achieved 9800 XP</h1>
+          <h1>Where I&apos;ve worked</h1>
         
           Wipro @ Meta / Facebook
           Blizzard Entertainment

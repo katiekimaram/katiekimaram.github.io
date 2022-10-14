@@ -7,6 +7,8 @@ export default function Layout({ children }) {
     <>
         <Head>
             <title>Katie Kim | Software Engineer & Tech Enthusiast</title>
+
+            <link rel="icon" href="logo.svg" />
         </Head>
 
         <Header />

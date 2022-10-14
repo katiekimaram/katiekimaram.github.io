@@ -1,0 +1,60 @@
+/* FOOTER */
+.footer
+  position: absolute
+  bottom: 0.5em
+  right: 0
+  width:100vw
+  font-family: 'Montserrat Alternates', sans-serif
+  font-weight: 600
+  a
+    text-decoration: none
+    color: var(--default)
+    transition: 0.3s
+    &:hover
+      color: var(--accent)
+  div
+    position: relative
+    margin: 0 0 0 auto
+    padding: 0.5em 0
+    &:first-child
+        padding: 1em
+        position: absolute
+        bottom: 0
+        left: 0
+        button
+            background: transparent
+            border: none
+            padding: 0 0.5em 0 0
+            fill: var(--default)
+            &:hover
+                color: var(--accent)
+        &:after
+            background: transparent
+            border: none
+    &:nth-child(2)
+      width: calc(16.6% - 90px)
+      span
+        margin-left: -90px
+    &:nth-child(3)
+      width: calc(33.3% - 160px)
+      span
+        margin-left: -160px
+    &:last-child
+      width: calc(55% - 200px)
+      .social
+        position: relative
+        padding: 0 0.5em
+        top: auto
+        left: -220px
+        transition: all .2s linear
+        &:hover
+          top: -0.3em
+    &:after
+      content: ''
+      position: absolute
+      top: 50%
+      right: 0
+      border-top: 1px solid var(--default)
+      background: var(--default)
+      width: 100%
+      transform: translateY(-50%)

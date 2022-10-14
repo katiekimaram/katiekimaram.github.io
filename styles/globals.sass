@@ -11,47 +11,7 @@
   --default: #fff
   --accent: #e06666
 
-/* MIXINS */
-@mixin hover-underline($type: fade, $dir: null, $weight: 2px)
-  position: relative
-  &:after
-    position: absolute
-    left: 0
-    content: ''
-    width: 100%
-    height: $weight
-    background: var(--accent)
-    @if $type == fade
-      transition: .3s
-      opacity: 0
-      visibility: hidden
-      @if $dir == bottom
-        bottom: $weight * -4
-      @else
-        bottom: $weight
-    @else if $type == slide
-      bottom: $weight * -2
-      transform: scale(0, 1)
-      transition: transform .3s
-      @if $dir == left-right or $dir == right-in-left
-        transform-origin: left top
-      @else if $dir == right-left or $dir == left-in-right
-        transform-origin: right top
-      @else
-        transform-origin: center top
-  &:hover
-    color: var(--accent)
-  &:hover::after
-    @if $type == fade
-      bottom: $weight * -2
-      opacity: 1
-      visibility: visible
-    @else if $type == slide
-      @if $dir == left-in-right
-        transform-origin: left top
-      @else if $dir == right-in-left
-        transform-origin: right top
-      transform: scale(1, 1)
+
     
 /* GENERAL */
 // *
@@ -100,42 +60,6 @@ article
   display: flex 
   justify-content: center
   align-items: center
-
-/* NAVIGATION */
-nav 
-  position: absolute
-  top: 0 
-  right: 0
-  padding: 0.5em
-  margin: 2em 0
-  width: calc(100vw - 2em)
-  display: grid
-  grid-template-columns: .5fr 1.5fr
-  grid-template-rows: 1fr
-  grid-column-gap: 0px
-  grid-row-gap: 0px
-  
-  button
-    background: transparent
-    border: none
-    padding: 0 0.5em 0 0
-    fill: var(--default)
-    &:hover
-      color: var(--accent)
-  a:not(.resume), a:active:not(.resume), a:focus:not(.resume)
-    text-transform: uppercase
-    font-weight: bold
-    padding: 0.5em
-    vertical-align: top
-    text-decoration: none
-    color: var(--default)
-    transition: 0.3s
-    font-weight: bold
-    @include hover-underline('slide', 'right-left')
-    &:hover
-      color: var(--accent)
-  div:last-child
-    text-align: right
     
 .resume
   border-radius: 0.5em
@@ -152,49 +76,3 @@ nav
     border: 2px solid var(--accent)
     box-shadow: inset 0px -4em 0px 0px var(--accent)
     color: var(--background)
-
-/* FOOTER */
-footer
-  position: absolute
-  bottom: 0.5em
-  right: 0
-  width:100vw
-  font-family: 'Montserrat Alternates', sans-serif
-  font-weight: 600
-  a
-    text-decoration: none
-    color: var(--default)
-    transition: 0.3s
-    &:hover
-      color: var(--accent)
-  div
-    position: relative
-    margin: 0 0 0 auto
-    padding: 0.5em 0
-    &:first-child
-      width: calc(16.6% - 90px)
-      span
-        margin-left: -90px
-    &:nth-child(even)
-      width: calc(33.3% - 160px)
-      span
-        margin-left: -160px
-    &:last-child
-      width: calc(55% - 200px)
-      .social
-        position: relative
-        padding: 0 0.5em
-        top: auto
-        left: -220px
-        transition: all .2s linear
-        &:hover
-          top: -0.3em
-    &:after
-      content: ''
-      position: absolute
-      top: 50%
-      right: 0
-      border-top: 1px solid var(--default)
-      background: var(--default)
-      width: 100%
-      transform: translateY(-50%)

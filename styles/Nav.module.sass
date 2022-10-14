@@ -11,7 +11,21 @@
   grid-template-rows: 1fr
   grid-column-gap: 0px
   grid-row-gap: 0px
-  
+  .resume
+    border-radius: 0.5em
+    border: 2px solid var(--accent)
+    padding: 0.5em 1em
+    margin: 1em
+    text-align: center
+    font-weight: bold
+    color: var(--accent)
+    text-transform: uppercase
+    text-decoration: none
+    transition: 0.7s
+    &:hover
+      border: 2px solid var(--accent)
+      box-shadow: inset 0px -4em 0px 0px var(--accent)
+      color: var(--background)
   button
     background: transparent
     border: none
@@ -33,19 +47,3 @@
       color: var(--accent)
   div:last-child
     text-align: right
-    
-.resume
-  border-radius: 0.5em
-  border: 2px solid var(--accent)
-  padding: 0.5em 1em
-  margin: 1em
-  text-align: center
-  font-weight: bold
-  color: var(--accent)
-  text-transform: uppercase
-  text-decoration: none
-  transition: 0.7s
-  &:hover
-    border: 2px solid var(--accent)
-    box-shadow: inset 0px -4em 0px 0px var(--accent)
-    color: var(--background)

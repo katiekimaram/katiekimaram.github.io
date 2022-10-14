@@ -1,4 +1,4 @@
-import styles from '../styles/Experience.module.sass'
+import styles from '../styles/Projects.module.sass'
 import Image from 'next/image'
 
 import React from 'react';
@@ -6,7 +6,7 @@ import * as Icon from 'react-feather';
 
 export default function Experience() {
   return (
-    <article className={styles.exp}>
+    <article className={styles.projects}>
         <div>
         {/* What I've built
 

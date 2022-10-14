@@ -15,7 +15,7 @@ export default function Header() {
         </div>      
         <div>
             <Link href="/about">About Me</Link>
-            <Link href="/exp">Experience</Link>
+            <Link href="/experience">Experience</Link>
             <Link href="/projects">Projects</Link>
             <Link href="/contact">Contact</Link>
             <Link href="https://katiekimdev.medium.com">Blog</Link>

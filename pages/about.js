@@ -1,18 +1,19 @@
 import styles from '../styles/About.module.sass'
 import Image from 'next/image'
-import me from '../public/img/me.jpg'
+import me from './img/me.jpg'
 
-import React from 'react';
-import * as Icon from 'react-feather';
+import { PopupButton } from '@typeform/embed-react'
 
 const skills = [];
 
-export default function Home() {
+export default function About() {
   return (
     <article className={styles.about}>
         <div>
-            <Image src={me} width="100%" height="100%" className={styles.me} alt="Katie Kim" />
-            
+            <div className={styles.me}>
+                <Image src={me} alt="Katie Kim" />
+            </div>
+
             <h1>About Me</h1>
             <p>Hello, officially! My name is Katie and I make things that live on the internet. My interest in developing, programming, and engineering started when I was 10 years old when I decide to create MySpace layouts and learned HTML & CSS, which lead me to create websites using PHP, and WordPress.</p>
             <p>In the present day, I&#39;ve expanded my knowledge and arsenal. I&#39;ve had the privilege of working at Blizzard Entertainment for so many years, but I had to pursue my dreams of becoming a Software Engineer — eventually a Linux Engineer and entrepreneur. My main focus has been creating my own or taking on freelance work, while actively working for Wipro at the Meta office.</p>
@@ -50,7 +51,12 @@ export default function Home() {
             <p>
                 My inbox is always open if you want to ask any questions or just say hi, and I&#39;ll try my best to get back to you!
             </p>
-            <button data-tf-popup="MXdyjDL3" data-tf-iframe-props="title=Contact Form" data-tf-medium="snippet" className="resume">Hello, how are you?</button><script src="https://embed.typeform.com/next/embed.js" async />
+
+            <PopupButton id="MXdyjDL3" size="70" className="resume">
+                Hello, how are you?
+            </PopupButton>
+
+            {/* <button data-tf-popup="MXdyjDL3" data-tf-iframe-props="title=Contact Form" data-tf-medium="snippet" className="resume">Hello, how are you?</button><script src="//embed.typeform.com/next/embed.js" async /> */}
         </div>
     </article>
   )

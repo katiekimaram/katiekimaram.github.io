@@ -1,16 +1,17 @@
 import styles from '../styles/Contact.module.sass'
 import Image from 'next/image'
-import { Popover } from '@typeform/embed-react'
+import { Widget } from '@typeform/embed-react'
 
 import React from 'react';
 import * as Icon from 'react-feather';
 
 export default function Contact() {
   return (
-    <article id="contact">
+    <article className={styles.contact}>
         <div>
             <h1>Get in touch!</h1>
-            <Popover id="MXdyjDL3" snippet className="contact"></Popover>
+            Let's get to know each other, don't be a stranger! I&apos;ll try to my best to get back to you swiftly 😊
+            <Widget id="MXdyjDL3" className={styles.form} />
         </div>
     </article>
   )

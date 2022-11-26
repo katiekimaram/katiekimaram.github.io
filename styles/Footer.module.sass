@@ -1,3 +1,5 @@
+@import 'variables.sass'
+
 /* FOOTER */
 .footer
   position: absolute
@@ -8,10 +10,10 @@
   font-weight: 600
   a
     text-decoration: none
-    color: var(--default)
+    color: themed('default')
     transition: 0.3s
     &:hover
-      color: var(--accent)
+      color: themed('accent')
   div
     position: relative
     margin: 0 0 0 auto
@@ -25,9 +27,10 @@
             background: transparent
             border: none
             padding: 0 0.5em 0 0
-            fill: var(--default)
+            fill: themed('default')
             &:hover
-                color: var(--accent)
+                fill: themed('accent')
+                color: themed('accent')
         &:after
             background: transparent
             border: none
@@ -54,7 +57,7 @@
       position: absolute
       top: 50%
       right: 0
-      border-top: 1px solid var(--default)
-      background: var(--default)
+      border-top: 1px solid themed('default')
+      background: themed('default')
       width: 100%
       transform: translateY(-50%)

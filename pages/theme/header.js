@@ -10,7 +10,7 @@ export default function Header() {
             <Link href="/">
                 <Image src={logo} width={75} height={75} alt="logo" />
             </Link>
-        </div>      
+        </div>
         <div>
             <Link href="/about">About Me</Link>
             <Link href="/experience">Experience</Link>

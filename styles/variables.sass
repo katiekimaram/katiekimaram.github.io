@@ -1,0 +1,8 @@
+/* VARIABLES */
+$theme-being-used: light
+
+$themes: (dark: (background: #000F08, default: #fff, accent: #e06666, highlight: #FFBE0B, invert: #73A6AD, muted: #73A6AD), light: (background: #FEFEFF, default: #000, accent: #e06666, highlight:#F5FDC6, invert: #F5FDC6, muted:#545F66))
+
+@function themed($color-name, $theme-name: $theme-being-used)
+  $theme: map-get($themes, #{$theme-name})
+  @return map-get($theme, #{$color-name})

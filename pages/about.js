@@ -15,10 +15,10 @@ export default function About() {
             </div>
 
             <h1>About Me</h1>
-            <p>Hello, officially! My name is Katie and I make things that live on the internet. My interest in developing, programming, and engineering started when I was 10 years old when I decide to create MySpace layouts and learned HTML & CSS, which lead me to create websites using PHP, and WordPress.</p>
-            <p>In the present day, I&#39;ve expanded my knowledge and arsenal. I&#39;ve had the privilege of working at Blizzard Entertainment for so many years, but I had to pursue my dreams of becoming a Software Engineer — eventually a Linux Engineer and entrepreneur. My main focus has been creating my own or taking on freelance work, while actively working for Wipro at the Meta office.</p>
-            
-            <p> Here&#39;s all the technologies that I&#39;ve worked with so far:
+            <p>Hello, my name is Katie and I make things that live on the internet. My interest in developing, programming, and engineering started when I was 10 years old when I decide to create MySpace layouts and learned HTML & CSS, which lead me to create websites using PHP, and WordPress.</p>
+            <p>In the present day, I&#39;ve expanded my knowledge and arsenal. I&#39;ve had the privilege of working at Blizzard Entertainment for so many years, but I had to pursue my dreams of becoming a Software Engineer — eventually a Linux Engineer and entrepreneur. My main focus has been creating my own or taking on freelance work, while actively working for Wipro, contacted to Meta.</p>
+
+            <p> Here&#39;s all the skills and technologies that I&#39;ve gathered with so far, with so much more room for growth!
                 <ul>
                     <li>88 WPM</li>
                     <li>Wordpress</li>
@@ -43,10 +43,10 @@ export default function About() {
                     <li>Confluence</li>
                     <li>Next.js</li>
                     <li>MongoDB</li>
-                    <li>Adobe Photoshop</li>       
+                    <li>Adobe Photoshop</li>
                 </ul>
             </p>
-            
+
             <h2>Looking to connect?</h2>
             <p>
                 My inbox is always open if you want to ask any questions or just say hi, and I&#39;ll try my best to get back to you!

@@ -10,11 +10,15 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div>
-        <button><Icon.Play fill="true" /></button>
-        <button id="darkness_my_old_friend" ><Icon.Moon fill="true" /></button>
+        <button>
+          <Icon.Play fill="true" />
+        </button>
+        <button id="darkness_my_old_friend" >
+          <Icon.Moon fill="true" />
+        </button>
       </div>
       <div><span>austin, tx</span></div>
-      <div><span><a href="mailto:me@katiekim.dev" class="mail">me@katiekim.dev</a></span></div>
+      <div><span><a href="mailto:me@katiekim.dev" className="mail">me@katiekim.dev</a></span></div>
       <div>
           <Link href="https://github.com/katiekimaram"><a className={styles.social}><Icon.GitHub /></a></Link>
           <Link href="https://www.linkedin.com/in/katiekimaram/"><a className={styles.social}><Icon.Linkedin /></a></Link>

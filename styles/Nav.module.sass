@@ -1,3 +1,5 @@
+@import 'variables.sass'
+
 /* MIXINS */
 @mixin hover-underline($type: fade, $dir: null, $weight: 2px)
   position: relative
@@ -7,7 +9,7 @@
     content: ''
     width: 100%
     height: $weight
-    background: var(--accent)
+    background: themed('accent')
     @if $type == fade
       transition: .3s
       opacity: 0
@@ -27,7 +29,7 @@
       @else
         transform-origin: center top
   &:hover
-    color: var(--accent)
+    color: themed('accent')
   &:hover::after
     @if $type == fade
       bottom: $weight * -2
@@ -40,10 +42,10 @@
         transform-origin: right top
       transform: scale(1, 1)
 
-  
-.nav 
+
+.nav
   position: absolute
-  top: 0 
+  top: 0
   right: 0
   padding: 0.5em
   margin: 2em 0
@@ -55,31 +57,31 @@
   grid-row-gap: 0px
   .resume
     border-radius: 0.5em
-    border: 2px solid var(--accent)
+    border: 2px solid themed('accent')
     padding: 0.5em 1em
     margin: 1em
     text-align: center
     font-weight: bold
-    color: var(--accent)
+    color: themed('accent')
     text-transform: uppercase
     text-decoration: none
     transition: 0.7s
     &:hover
-      border: 2px solid var(--accent)
-      box-shadow: inset 0px -4em 0px 0px var(--accent)
-      color: var(--background)
+      border: 2px solid themed('accent')
+      box-shadow: inset 0px -4em 0px 0px themed('accent')
+      color: themed('background')
   a:not(.resume), a:active:not(.resume), a:focus:not(.resume)
     text-transform: uppercase
     font-weight: bold
     padding: 0.5em
     vertical-align: top
     text-decoration: none
-    color: var(--default)
+    color: themed('default')
     transition: 0.3s
     font-weight: bold
     @include hover-underline('slide', 'right-left')
     &:hover
-      color: var(--accent)
+      color: themed('accent')
   div:first-child
     margin-top: -1em
   div:last-child

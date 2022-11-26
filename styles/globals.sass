@@ -1,54 +1,42 @@
+@import 'variables.sass'
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:wght@400;700&display=swap')
 
-/* VARIABLES */
-:root 
-  --background: #fff
-  --default: #000
-  --accent: #e06666
-
-.dark-theme
-  --background: #000
-  --default: #fff
-  --accent: #e06666
-
-
-    
 /* GENERAL */
 // *
 //   scrollbar-width: thin
-//   scrollbar-color: var(--accent) var(--background)
+//   scrollbar-color: themed('accent) themed('background)
 // *::-webkit-scrollbar
 //     width: 10px
 // *::-webkit-scrollbar-track
-//   background: var(--background)
-// *::-webkit-scrollbar-thumb 
-//   background-color: var(--accent)
+//   background: themed('background)
+// *::-webkit-scrollbar-thumb
+//   background-color: themed('accent)
 //   border-radius: 10px
-//   border: 3px double var(--background)
+//   border: 3px double themed('background)
 
 body
   font-family: 'Montserrat', sans-serif
   font-size:0.9em
-  color: var(--default)
+  color: themed('default')
   scroll-behavior: smooth
-  background: var(--background)
+  background: themed('background')
 
 h1, h2, h3, h4, h5, h6
   margin: 0
   padding: 0
-  
+
 h1:not(.intro)
   font-size: 3em
-  color: var(--accent)
+  color: themed('accent')
   font-family: 'Montserrat Subrayada', sans-serif
 
 h2:not(.intro)
   font-size: 2em
-  color: var(--accent)
+  color: themed('accent')
   font-family: 'Montserrat Alternates', sans-serif
 p
   line-height: 1.7
-    
+
 button
   transition: 0.3s
 
@@ -57,22 +45,22 @@ article
   height: calc(100vh - 1em)
   margin-right: 6em
   width: 70%
-  display: flex 
+  display: flex
   justify-content: center
   align-items: center
-    
+
 .resume
   border-radius: 0.5em
-  border: 2px solid var(--accent)
+  border: 2px solid themed('accent')
   padding: 0.5em 1em
   margin: 1em
   text-align: center
   font-weight: bold
-  color: var(--accent)
+  color: themed('accent')
   text-transform: uppercase
   text-decoration: none
   transition: 0.7s
   &:hover
-    border: 2px solid var(--accent)
-    box-shadow: inset 0px -4em 0px 0px var(--accent)
-    color: var(--background)
+    border: 2px solid themed('accent')
+    box-shadow: inset 0px -4em 0px 0px themed('accent')
+    color: themed('background')

@@ -3,20 +3,20 @@
     height: calc(100vh - 1em)
     margin-left: 6em
     width: 80%
-    display: flex 
+    display: flex
     justify-content: center
     align-items: center
     .me
         float: right
         margin: 1.5em
-        background: var(--background)
-        box-shadow: var(--background) -10px 10px 0 -3px, var(--accent) -10px 10px, var(--background) 10px -10px 0px -3px, var(--accent) 10px -10px
+        background: themed('background')
+        box-shadow: themed('background') -10px 10px 0 -3px, themed('accent') -10px 10px, themed('background') 10px -10px 0px -3px, themed('accent') 10px -10px
     button
         background: transparent
         display: block
         text-transform: none
         padding: 1em
-        border: 1px solid var(--accent)
+        border: 1px solid themed('accent')
         font-weight: normal
         margin:0
     ul
@@ -27,7 +27,7 @@
             padding: 0.1em 0
             &:before
                 content: "\2771"
-                color: var(--accent)
+                color: themed('accent')
                 font-weight: bold
                 display: inline-block
                 width: 1em

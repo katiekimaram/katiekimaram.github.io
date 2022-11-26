@@ -13,6 +13,7 @@
   "dependencies": {
     "@typeform/embed": "^2.0.1",
     "@typeform/embed-react": "^2.1.0",
+    "bootstrap": "^5.2.2",
     "feather-icons": "^4.29.0",
     "next": "12.3.1",
     "next.js": "^1.0.3",

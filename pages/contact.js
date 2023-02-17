@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <article className={styles.contact}>
         <div>
-            <h1>Don't be a stranger!</h1>
+            <h1>Don&apos;t be a stranger!</h1>
             <br/>
             <Widget id="GieQf6I8" className={styles.form} />
         </div>

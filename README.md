@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# katiekim.dev
 
-## Getting Started
+Redesigned portfolio, on the same stack as the original: [Next.js](https://nextjs.org/)
+pages router, Sass, static export to GitHub Pages via `next.config.js` + `CNAME`.
 
-First, run the development server:
+Single-page site: everything (About, Experience, Projects) lives on `pages/index.js`
+as anchor-linked sections, and the nav scrolls smoothly to each one instead of
+navigating to separate pages. Contact info lives in the footer, which is the
+`#contact` scroll target.
 
-```bash
-npm run dev
-# or
-yarn dev
+## What this covers
+
+- Matches the original visual identity: coral accent, Montserrat family, KK monogram,
+  dimmed-first-name hero treatment, footer signature block with social icons.
+- Working dark/light toggle. Both themes are CSS custom properties in
+  `styles/variables.sass`, switched at runtime via `hooks/useTheme.js`, persisted in
+  `localStorage`, defaulting to system preference on first visit.
+- Interactive background (`components/BackgroundFX.js`): a dense, translucent grid of
+  dots plus a handful of geometric shapes (circle, diamond, plus), both react to
+  cursor proximity. No blur, no gradients, solid color only.
+- Fixed nav and footer while scrolling.
+- Adds the current role at Gorilla (missing from the live site before), groups
+  skills by category, fills in the previously-empty Projects section, and adds an
+  Experience/Education tab switcher.
+- Code split into `components/` (Nav, Logo, Layout, Footer, BackgroundFX),
+  `components/sections/` (About, Experience, Projects), and `data/`
+  (experience.js, education.js, projects.js), so content edits do not touch layout code.
+
+## Structure
+
+```
+components/            Nav, Logo, Layout, Footer, BackgroundFX
+components/sections/    AboutSection, ExperienceSection, ProjectsSection
+hooks/                   useTheme.js
+data/                    experience.js, education.js, projects.js
+pages/                   index.js (single page), _app.js
+styles/                  one Sass module per component/section, plus variables.sass + globals.sass
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Still needs your input
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Search for `[bracketed placeholders]`, mainly in `data/experience.js`:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Start date at Gorilla
+- Wipro/Meta end date
+- Bullets for Wipro/Meta, Blizzard, and SourceDay roles
+- Whether to keep or cut the SourceDay entry
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Getting started
 
-## Learn More
+```
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open <http://localhost:3000>.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run build
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Static output goes to `out/`, ready to deploy to GitHub Pages same as before.

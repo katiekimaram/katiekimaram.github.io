@@ -1,8 +1,27 @@
-/* VARIABLES */
-$theme-being-used: light
+// Design tokens
+// Both themes are defined as CSS custom properties so switching is a runtime
+// data-theme attribute swap, not a build-time Sass variable like before.
 
-$themes: (dark: (background: #000F08, default: #fff, accent: #e06666, highlight: #FFBE0B, invert: #73A6AD, muted: #73A6AD), light: (background: #FEFEFF, default: #000, accent: #e06666, highlight:#F5FDC6, invert: #F5FDC6, muted:#545F66))
+:root
+  --bg: #FEFEFF
+  --default: #000000
+  --accent: #e06666
+  --highlight: #F5FDC6
+  --on-highlight: #5c5400
+  --muted: #545F66
+  --border: rgba(0, 0, 0, 0.08)
+  --border-strong: rgba(0, 0, 0, 0.15)
+  --chrome-bg: rgba(254, 254, 255, 0.85)
 
-@function themed($color-name, $theme-name: $theme-being-used)
-  $theme: map-get($themes, #{$theme-name})
-  @return map-get($theme, #{$color-name})
+:root[data-theme="dark"]
+  --bg: #16191D
+  --default: #F2F3F5
+  --accent: #e08080
+  --highlight: #F5FDC6
+  --on-highlight: #5c5400
+  --muted: #9AA1A9
+  --border: rgba(255, 255, 255, 0.1)
+  --border-strong: rgba(255, 255, 255, 0.18)
+  --chrome-bg: rgba(22, 25, 29, 0.85)
+
+$font-body: 'Montserrat', sans-serif

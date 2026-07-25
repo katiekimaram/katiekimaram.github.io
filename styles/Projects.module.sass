@@ -1,0 +1,56 @@
+.grid
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 1.5em
+
+  @media (max-width: 760px)
+    grid-template-columns: 1fr
+
+.card
+  border: 1px solid var(--border-strong)
+  border-radius: 0.6em
+  padding: 1.6em
+  transition: 0.3s
+
+  &:hover
+    border-color: var(--accent)
+    transform: translateY(-2px)
+
+.status
+  font-size: 0.65rem
+  text-transform: uppercase
+  font-weight: 700
+  padding: 0.2em 0.6em
+  border-radius: 1em
+  float: right
+
+.shipped
+  background: var(--highlight)
+  color: var(--on-highlight)
+
+.progress
+  background: var(--accent)
+  color: var(--bg)
+
+.title
+  font-weight: 700
+  font-size: 1.05rem
+  margin-bottom: 0.5em
+
+.desc
+  color: var(--muted)
+  font-size: 0.9rem
+  margin: 0.6em 0 1em
+  clear: both
+
+.tags
+  display: flex
+  flex-wrap: wrap
+  gap: 0.4em
+
+  span
+    font-size: 0.7rem
+    padding: 0.3em 0.7em
+    border: 1px solid var(--border-strong)
+    border-radius: 1em
+    color: var(--muted)

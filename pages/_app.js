@@ -1,12 +1,5 @@
-import '../styles/globals.sass'
-import Layout from './theme'
+import '../styles/globals.sass';
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  )
+export default function App({ Component, pageProps }) {
+  return <Component {...pageProps} />;
 }
-
-export default MyApp

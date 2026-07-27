@@ -2,6 +2,7 @@ import Layout from '../components/Layout';
 import AboutSection from '../components/sections/AboutSection';
 import ExperienceSection from '../components/sections/ExperienceSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
+import ContactSection from '../components/sections/ContactSection';
 import styles from '../styles/Home.module.sass';
 
 export default function Home() {
@@ -14,11 +15,9 @@ export default function Home() {
             <span className={styles.dim}>Aram</span>
             <span className={styles.solid}>Katie Kim</span>
           </h1>
-          <h2 className={styles.role}>I build the systems enterprise support teams run on.</h2>
+          <h2 className={styles.role}>A technical enthusiast, not just an engineer.</h2>
           <p className={styles.copy}>
-            Enterprise support and platform operations engineer specializing in Zendesk
-            architecture, incident response, and the automation that takes manual work off
-            people&apos;s plates.
+            I care about how systems work end to end: the infrastructure, the data, the automation, and AI tooling that's changing it all. 7+ years working across different systems and exploring how AI reshapes the way technical teams work.
           </p>
           <a href="#projects" className={styles.cta}>
             Check out my work!
@@ -33,6 +32,7 @@ export default function Home() {
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
+      <ContactSection />
     </Layout>
   );
 }

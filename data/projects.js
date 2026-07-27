@@ -38,6 +38,7 @@ const projects = [
     description:
       'Tampermonkey scripts for a farming game, including Crop Lock, which intercepts WebSocket frames to block accidental crop destruction, and an in-progress in-game weather forecast widget.',
     tags: ['WebSocket', 'Reverse engineering', 'Tampermonkey'],
+    link: 'https://github.com/katiekimaram',
   },
 ];
 

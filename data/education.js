@@ -6,7 +6,7 @@ const education = [
     current: true,
   },
   {
-    degree: 'Bachelors in Information Technology & Security',
+    degree: 'Bachelor of Science in Information Technology & Security',
     institution: 'University of Phoenix',
     status: 'Completed',
     current: false,
@@ -17,6 +17,12 @@ const education = [
     status: 'Completed',
     current: false,
   },
+  {
+    degree: 'Front End Development Libraries, JavaScript Algorithms & Data Structures, Responsive Web Design',
+    institution: 'freeCodeCamp',
+    status: 'Completed',
+    current: false,
+  }
 ];
 
 export default education;
